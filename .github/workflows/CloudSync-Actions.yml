@@ -48,5 +48,8 @@ jobs:
           # 更改时区
           sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
+          # 去重
+          rclone dedupe weking.chen@gmail.com:Backup
+
           rclone sync --no-update-modtime --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/24.050.0310.0001" -v weking_spare: weking.chen@gmail.com:Backup --drive-acknowledge-abuse
           echo "weking_spare文件已备份到Google盘"
