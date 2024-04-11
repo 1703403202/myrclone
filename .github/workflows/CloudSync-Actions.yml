@@ -51,5 +51,8 @@ jobs:
           # 去重
           rclone dedupe weking.chen@gmail.com:Backup
 
-          rclone sync --no-update-modtime --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/24.050.0310.0001" -v weking_spare: weking.chen@gmail.com:Backup --drive-acknowledge-abuse
+          rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/24.055.0317.0002" -v weking_spare:spare weking.chen@gmail.com:Backup\spare --drive-acknowledge-abuse
+          rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/24.055.0317.0002" -v weking_spare:iOS_Photo weking.chen@gmail.com:Backup\iOS_Photo --drive-acknowledge-abuse
+          rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/24.055.0317.0002" -v weking_spare:gphotos weking.chen@gmail.com:Backup\gphotos --drive-acknowledge-abuse
+          rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/24.055.0317.0002" -v weking_spare:bitwarden_backup weking.chen@gmail.com:Backup\bitwarden_backup --drive-acknowledge-abuse
           echo "weking_spare文件已备份到Google盘"
