@@ -54,7 +54,11 @@ jobs:
           rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/24.055.0317.0002" -v weking_spare:iOS_Photo weking.chen@gmail.com:Backup/iOS_Photo --drive-acknowledge-abuse
           rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/24.055.0317.0002" -v weking_spare:gphotos weking.chen@gmail.com:Backup/gphotos --drive-acknowledge-abuse
           rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/24.055.0317.0002" -v weking_spare:bitwarden_backup weking.chen@gmail.com:Backup/bitwarden_backup --drive-acknowledge-abuse
-          rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/24.055.0317.0002" -v weking_spare:spare weking.chen@gmail.com:Backup/spare --drive-acknowledge-abuse
+          rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/24.055.0317.0002" -v weking_spare:spare/Dropbox weking.chen@gmail.com:Backup/spare/Dropbox --drive-acknowledge-abuse
+          rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/24.055.0317.0002" -v weking_spare:spare/'Google 相册' weking.chen@gmail.com:Backup/spare/'Google 相册' --drive-acknowledge-abuse
+          rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/24.055.0317.0002" -v weking_spare:spare/Mate30Pro_Backup weking.chen@gmail.com:Backup/spare/Mate30Pro_Backup --drive-acknowledge-abuse
+          rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/24.055.0317.0002" -v weking_spare:spare/OneDrive weking.chen@gmail.com:Backup/spare/OneDrive --drive-acknowledge-abuse
+          rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/24.055.0317.0002" -v weking_spare:spare/P20Pro_Backup weking.chen@gmail.com:Backup/spare/P20Pro_Backup --drive-acknowledge-abuse
           echo "weking_spare文件已备份到Google盘"
 
       - name: Delete workflow runs
