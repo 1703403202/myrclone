@@ -56,3 +56,9 @@ jobs:
           rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/24.055.0317.0002" -v weking_spare:bitwarden_backup weking.chen@gmail.com:Backup/bitwarden_backup --drive-acknowledge-abuse
           rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/24.055.0317.0002" -v weking_spare:spare weking.chen@gmail.com:Backup/spare --drive-acknowledge-abuse
           echo "weking_spare文件已备份到Google盘"
+
+      - name: Delete workflow runs
+        uses: wekingchen/delete-workflow-runs@main
+        with:
+          retain_days: 1
+          keep_minimum_runs: 10
