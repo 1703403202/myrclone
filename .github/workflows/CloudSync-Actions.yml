@@ -59,3 +59,12 @@ jobs:
         with:
           retain_days: 1
           keep_minimum_runs: 10
+
+      - name: Write Rclone config to GitHub secret
+        env:
+          CLI_TOKEN: ${{ secrets.CLI_TOKEN }}
+          REPO: wekingchen/Rclone-Actions
+        run: |
+          RCLONE_CONFIG=$(cat ~/.config/rclone/rclone.conf)
+          gh auth login --with-token <<< "${CLI_TOKEN}"
+          gh secret set CLOUDSYNC_RCLONE_CONFIG -b"${RCLONE_CONFIG}" --repo "${REPO}"
