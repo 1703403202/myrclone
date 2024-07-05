@@ -63,7 +63,7 @@ jobs:
       - name: Write Rclone config to GitHub secret
         env:
           CLI_TOKEN: ${{ secrets.CLI_TOKEN }}
-          REPO: wekingchen/Rclone-Actions
+          REPO: 1703403202/myrclone
         run: |
           RCLONE_CONFIG=$(cat ~/.config/rclone/rclone.conf)
           gh auth login --with-token <<< "${CLI_TOKEN}"
