@@ -51,7 +51,7 @@ jobs:
           # 去重
           rclone dedupe weking.chen@gmail.com:Backup
 
-          rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/24.101.0519.0010" -v weking_spare:bitwarden_backup weking.chen@gmail.com:Backup/bitwarden_backup --drive-acknowledge-abuse
+          rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/24.116.0609.0005" -v weking_spare:bitwarden_backup weking.chen@gmail.com:Backup/bitwarden_backup --drive-acknowledge-abuse
           echo "bitwarden备份文件已拷贝到Google盘"
 
       - name: Delete workflow runs
